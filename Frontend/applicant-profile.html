@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Profile</title>
+    <link rel="stylesheet" href="css/second.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> <!--jQuery-->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <script src="js/applicant_profile.js"></script>
+  </head>
+  <body>
+
+    <!--navigation bar -->
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <button type="button" class="btn btn-default" aria-label="Left Align">
+        <a class="navbar-brand" href="#"></a>
+      </button>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/applicant-careers">Careers</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/applicant-channel">Communication Channel</a>
+          </li>
+          <li class="nav-itema">
+            <a class="nav-link" href="/jobapplication">Apply now</a>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="nav-item active">
+            <a class="nav-link" href="/profile">Profile</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/login">Log Out</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container">
+      <br>
+      <h2>Contact Preferences</h2>
+      <div class="row">
+        <div class="col">
+          <div class="p-3 mb-2 bg-light text-dark">
+          <h3>Contact Information</h3>
+          <div class="row">
+            <div class="col">
+              <p class="font-weight-bold">Email Address</p>
+              <p class="font-weight-bold">First Name</p>
+              <p class="font-weight-bold">Last Name</p>
+            </div>
+            <div class="col">
+              <p> {{Applicant_Email}} </p>
+              <p> {{Applicant_FirstName}} </p>
+              <p> {{Applicant_LastName}} </p>
+            </div>
+          </div>
+          <span class= "float-right"> <a class="btn btn-outline-secondary" href="#" role="button">Edit Profile</a> </span>
+          <br><br>
+        </div>
+      </div>
+      <div class="col">
+        <div class="p-3 mb-2 bg-light text-dark">
+          <h3> Jobs Applied <span class= "float-right"> <a class="btn btn-outline-secondary" href="/jobapplication" role="button">Apply Jobs</a> </span></h3>
+          <table class="table bg-white" id = "application_table">
+            <thead>
+              <tr>
+                <th scope="col">Jobs Applied</th>
+                <th scope="col">Status</th>
+                <th scope="col">Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">{{Applied_Role}}</th>
+                <td class="application-status" id ="{{Application_ID}}">{{Application_Status}}</td>
+                <td><a href="/latecareers" class="text-primary">Click</a></td>
+              </tr>
+              <tr>
+                <th scope="row">{{Applied_Role}}</th>
+                <td class="application-status" id ="{{Application_ID}}">{{Application_Status}}</td>
+                <td><a href="/latecareers" class="text-primary">Click</a></td>
+              </tr>
+              <tr>
+                <th scope="row">{{Applied_Role}}</th>
+                <td class="application-status" id ="{{Application_ID}}">{{Application_Status}}</td>
+                <td><a href="/latecareers" class="text-primary">Click</a></td>
+              </tr>
+            </tbody>
+          </table></div></div>
+      </div>
+      <div class="row"></div>
+      <div class="row">
+      <div class="col">
+        <div class="p-3 mb-2 bg-light text-dark">
+        <h3>Data Privacy Consent Statement</h3>
+        <p>{{tick}} You've signed the most recent version of the Data Privacy Consent Statement </p>
+
+      </div></div>
+      <div class="col">
+        <div class="p-3 mb-2 bg-light text-dark">
+        <h3>Language</h3>
+          <br>
+          <p class="font-weight-bold">Current Language</p>
+          <p class="font-weight-bold">English (United Kingdom)</p>
+        </div>
+      </div>
+      </div>
+    </div>
+    <!-- <div class="container">
+      <h2>Contact Preferences</h2>
+      <div class="row">
+        <div class="col">
+          <div class="p-3 mb-2 bg-light text-dark">
+          <h3>Contact Information</h3>
+          <p class="font-weight-bold">Email Address</p>
+          <p class="font-weight-bold">First Name</p>
+          <p class="font-weight-bold">Last Name</p></div></div>
+        <div class="col">
+          <div class="p-3 mb-2 bg-light text-dark">
+          <h3>Jobs Applied</h3>
+          <p>Contact Information</p>
+          <p>Email Address</p>
+          <p>First Name</p>
+          <p>Last Name</p></div></div>
+         <div class="w-100"></div>
+        <div class="col">
+          <div class="p-3 mb-2 bg-light text-dark">
+          <h3>Data Privacy Consent Statement</h3>
+
+
+        </div></div>
+        <div class="col">
+          <div class="p-3 mb-2 bg-light text-dark">
+          <h3>Language</h3>
+          </div>
+        </div>
+        </div>
+      </div> -->
+  </body>
+</html>

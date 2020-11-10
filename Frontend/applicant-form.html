@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Applicant Form</title>
+    <link rel="stylesheet" href="css/second.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <script src="js/applicant_form.js"></script>
+  </head>
+  <body class="bg-third">
+  <!--navigation bar -->
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <button type="button" class="btn btn-default" aria-label="Left Align">
+        <a class="navbar-brand" href="#"></a>
+      </button>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/applicant-careers">Careers</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/applicant-channel">Communication Channel</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="/jobapplication">Apply now</a>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="nav-item">
+            <a class="nav-link" href="/profile">Profile</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/login">Log Out</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container">
+      <h1> Fill in your personal details </h1>
+        <form id = "applicant_form" class = "needs-validation" novalidate action="/applicationcomplete" method="post">
+          <div class="form-group">
+          <label for="firstname">First Name</label>
+          <input type="text" class="form-control" aria-describedby="firstname" id="firstname" placeholder="FName" required>
+          <div class="valid-feedback">
+            Looks good!
+          </div>
+          </div>
+          <br>
+          <div class="form-group" >
+          <label for="lastname">Last Name</label>
+          <input type="text" class="form-control" aria-describedby="lastname" id="lastname" placeholder="LName" required>
+          <div class="valid-feedback">
+            Looks good!
+          </div>
+          </div>
+          <br>
+          <div class="form-group">
+          <label for="email">Email address</label>
+          <input type="email" class="form-control" id="email" aria-describedby="email" placeholder="Enter email" required>
+          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+          <div class="invalid-feedback">
+            Please choose an email adress.
+          </div>
+          </div>
+          <div class="form-group">
+          <label for="passwd">Create Password</label>
+          <input type="password" class="form-control" id="passwd" placeholder="Password" required>
+          </div>
+          <br>
+          <div class="form-group">
+          <label for="adress">Address</label>
+          <input type="text" class="form-control" id="adress" placeholder="Street" required>
+          </div>
+          <br>
+          <div class="form-row">
+          <div class="form-group col-md-6">
+          <label for="city">City</label>
+          <input type="text" class="form-control" id="city" required>
+            </div>
+            <br>
+            <div class="form-group col-md-4">
+            <label for="county">County</label>
+            <input type="text" class="form-control" id="county" required>
+            </div>
+            <br>
+            <div class="form-group col-md-2">
+            <label for="zip">Zip</label>
+            <input type="text" class="form-control" id="zip" required>
+            </div>
+          </div>
+
+          <br>
+          <h3>Early education</h3>
+          <div class="form-group">
+          <label for="school">Highschool attended</label>
+          <input type="text" class="form-control" id="school" aria-describedby="school" placeholder="School name" required>
+          </div>
+          <br>
+          <div class="form-group">
+            <label for="alevels">1st Best A levels subject</label>
+            <input type="text" class="form-control" id="a-level-subject-1" aria-describedby="a-level" placeholder="A-level Subject" required>
+          </div>
+          <div class="form-group">
+            <label for="alevels">Grade achieved in each A levels subject</label>
+            <select class="form-control" id="alevel-grade-1">
+              <option selected>Choose...</option>
+              <option>A*</option>
+              <option>A</option>
+              <option>B</option>
+              <option>C</option>
+              <option>D</option>
+              <option>E</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="alevels">2nd Best A levels subject</label>
+            <input type="text" class="form-control" id="a-level-subject-1" aria-describedby="a-level" placeholder="A-level Subject" required>
+          </div>
+          <div class="form-group">
+            <label for="alevels">Grade achieved in each A levels subject</label>
+            <select class="form-control" id="alevel-grade-1">
+              <option selected>Choose...</option>
+              <option>A*</option>
+              <option>A</option>
+              <option>B</option>
+              <option>C</option>
+              <option>D</option>
+              <option>E</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="alevels">3rd Best A levels subject</label>
+            <input type="text" class="form-control" id="a-level-subject-1" aria-describedby="a-level" placeholder="A-level Subject" required>
+          </div>
+          <div class="form-group">
+            <label for="alevels">Grade achieved in each A levels subject</label>
+            <select class="form-control" id="alevel-grade-1">
+              <option selected>Choose...</option>
+              <option>A*</option>
+              <option>A</option>
+              <option>B</option>
+              <option>C</option>
+              <option>D</option>
+              <option>E</option>
+            </select>
+          </div>
+          <br>
+          <h3>Higher education</h3>
+          <div class="form-group">
+          <label for="university">Please enter the name of your university</label>
+          <input type="text" class="form-control" id="university" aria-describedby="university" placeholder="Uni name" required>
+          </div>
+          <br>
+          <div class="form-group">
+          <label for="course">Course of Study</label>
+          <input type="text" class="form-control" id="course" aria-describedby="course" placeholder="Course" required>
+          </div>
+          <br>
+          <div class="form-group">
+          <label for="uniclass">Grade obtained</label>
+          <select class="form-control" id="uniclass">
+              <option selected>Choose...</option>
+              <option>First Class</option>
+              <option>Upper Second Class</option>
+              <option>Lower Second Class</option>
+              <option>Third Class</option>
+            </select>
+          </div>
+
+          <!-- Form for Skills -->
+          <br>
+          <h3>Skills</h3>
+          <label for="skills">Please enter the name of your skills</label>
+          <div class="form-group group-skills">
+            <div data-role="dynamic-fields">
+                <div class="form-inline">
+                  <div class="form-group group-skills">
+                    <div class="form-group">
+                      <input type="text" class="form-control" id="skills-1" aria-describedby="skills" placeholder="Title of Your Skills">
+                    </div>
+                    <br>
+                    <div class="form-group">
+                      <label for="skills_expertise">Expertise (1-10)</label>
+                      <select class="form-control" id="skills_expertise-1">
+                        <option selected>Choose...</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+                      </select>
+                    </div>
+                  </div>
+                    <button class="btn btn-danger" data-role="remove">
+                        x
+                    </button>
+                    <button class="btn btn-primary" data-role="add">
+                        +
+                    </button>
+                </div>  <!-- /div.form-inline -->
+            </div>  <!-- /div[data-role="dynamic-fields"] -->
+            <!-- <div class="form-group">
+              <label for="skills">Please enter the name of your skills</label>
+              <input type="text" class="form-control" id="skills-1" aria-describedby="skills" placeholder="Title of Your Skills">
+            </div>
+            <br>
+            <div class="form-group">
+              <label for="skills_expertise">Expertise (1-5)</label>
+              <select class="form-control" id="skills_expertise-1">
+                <option selected>Choose...</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+            </div> -->
+          </div>
+          <!-- Form for LANGUAGES_KNOWN -->
+          <br>
+          <h3>Technical Languages Known</h3>
+          <label for="languages_known">Please enter your proficiency with each technical languages you know</label>
+          <div class="form-group group-skills">
+            <div data-role="dynamic-fields">
+                <div class="form-inline">
+                  <div class="form-group group-skills">
+                    <div class="form-group">
+                      <input type="text" class="form-control" id="language-1" aria-describedby="languages" placeholder="Title of the language">
+                    </div>
+                    <br>
+                    <div class="form-group">
+                      <label for="languages_expertise">Expertise (1-10)</label>
+                      <select class="form-control" id="skills_expertise-1">
+                        <option selected>Choose...</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+                      </select>
+                    </div>
+                  </div>
+                    <button class="btn btn-danger" data-role="remove">
+                        x
+                    </button>
+                    <button class="btn btn-primary" data-role="add">
+                        +
+                    </button>
+                </div>  <!-- /div.form-inline -->
+            </div>  <!-- /div[data-role="dynamic-fields"] -->
+          <!--
+          <div class="form-group">
+            <label for="skills">Please enter your proficiency with each technical languages you know</label>
+            <input type="text" class="form-control" id="languages-1" aria-describedby="languages" placeholder="Title of the language">
+          </div>
+          <br>
+          <div class="form-group">
+            <label for="languages_expertise">Expertise (1-5)</label>
+            <select class="form-control" id="languages_expertise-1">
+              <option selected>Choose...</option>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </select>
+          </div> -->
+         <!-- <br>
+          <br>
+          <div class="custom-file">
+          <input type="file" class="custom-file-input" id="customFile" required>
+          <label class="custom-file-label" for="customFile">Please submit your CV</label>-->
+          </div>
+          <br>
+          <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1" required>
+          <label class="form-check-label" for="exampleCheck1">I have read and agreed to the <a href="#"data-toggle="modal" data-target="#terms-modal" >terms and conditions </a> </label>
+          </div>
+          <br>
+        <button type="submit" class="btn btn-primary btn-block" value="Continue to online assessement">Continue to online assessement</button>
+        </form>
+        <br>
+        <div class="modal fade" id="terms-modal" tabindex="-1" role="dialog" aria-labelledby="termsModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="termsModalLabel">Terms and Conditions</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <script>
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+        (function() {
+          'use strict';
+          window.addEventListener('load', function() {
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            var forms = document.getElementsByClassName('needs-validation');
+            // Loop over them and prevent submission
+            var validation = Array.prototype.filter.call(forms, function(form) {
+              form.addEventListener('submit', function(event) {
+                if (form.checkValidity() === false) {
+                  event.preventDefault();
+                  event.stopPropagation();
+                }
+                form.classList.add('was-validated');
+              }, false);
+            });
+          }, false);
+        })();
+        </script>
+    </div>
+    </body>
+  </html>

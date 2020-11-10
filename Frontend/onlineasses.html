@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Online Test</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> <!--jQuery-->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <script src="js/applicant_form.js"></script>
+  </head>
+  <body>
+  <!--navigation bar -->
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <button type="button" class="btn btn-default" aria-label="Left Align">
+        <a class="navbar-brand" href="#"></a>
+      </button>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Home <span class="sr-only"></span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="applicant_careers.html">Careers</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="applicant-channel.html">Communication Channel</a>
+          </li>
+          <li class="nav-item acrive">
+            <a class="nav-link" href="jobapplication.html">Apply now</a>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="nav-item">
+            <a class="nav-link" href="applicant-profile.html">Profile</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/login">Log Out</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container">
+      <h1> Please Complete our Online Assesment </h1>
+        <form id = "applicant_form" class = "needs-validation" novalidate>
+          <div class="form-group">
+            <label for="question1">{{Question 1}}</label>
+            <textarea class="form-control" id="question1" rows="3" placeholder="Your answer.." required></textarea>
+          </div>
+          <br>
+          <div class="form-group">
+            <label for="question2">{{Question 2}}</label>
+            <textarea class="form-control" id="question2" rows="3" placeholder="Your answer.." required></textarea>
+          </div>
+          <br>
+          <div class="form-group">
+            <label for="question3">{{Question 3}}</label>
+            <textarea class="form-control" id="question3" rows="3" placeholder="Your answer.." required></textarea>
+          </div>
+          <br>
+        <div class="form-group">
+        <p>{{Question 4}} </p>
+        <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+        <label class="form-check-label" for="inlineRadio1">1</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+        <label class="form-check-label" for="inlineRadio2">2</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+        <label class="form-check-label" for="inlineRadio3">3</label>
+      </div>
+      </div>
+      <br>
+      <br>
+      <button type="submit" class="btn btn-primary btn-block">Submit application</button>
+      </form>
+      <script>
+      // Example starter JavaScript for disabling form submissions if there are invalid fields
+      (function() {
+        'use strict';
+        window.addEventListener('load', function() {
+          // Fetch all the forms we want to apply custom Bootstrap validation styles to
+          var forms = document.getElementsByClassName('needs-validation');
+          // Loop over them and prevent submission
+          var validation = Array.prototype.filter.call(forms, function(form) {
+            form.addEventListener('submit', function(event) {
+              if (form.checkValidity() === false) {
+                event.preventDefault();
+                event.stopPropagation();
+              }
+              form.classList.add('was-validated');
+            }, false);
+          });
+        }, false);
+      })();
+      </script>
+      </div>
+    </body>
+  </html>

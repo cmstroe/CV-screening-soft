@@ -1,0 +1,92 @@
+html, body{
+  height: 100%;
+  background-color: #ECECEA;
+}
+
+.container{
+  height: 100%;
+  padding: 50px 20px 20px 20px;
+}
+
+.index-container{
+  height: 100%;
+  background-image: url("london-background.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.form-group{
+  border-radius: 10px;
+  border: 1px;
+  padding: 20px;
+
+}
+
+.login-container{
+  border-radius: 10px;
+  background-color: rgba(255,255,255,0.9);
+  border: 1px solid black;
+  padding: 20px;
+
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+  width: 50%;
+  height: 45%;
+  text-align: center;
+}
+
+.cv-view{
+  display: block;
+  background-color: #F1F1F1;
+  width: 60%;
+  float: left;
+  margin-right: 20px;
+  border: 1px solid black;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.report-view{
+  display: block;
+  background-color: #F1F1F1;
+  width: 100%;
+  padding: 20px;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+td:hover{
+  cursor: pointer;
+}
+
+.left-align{
+  float: left;
+}
+
+.question-display{
+  float: left;
+  margin-left: 10%;
+  border-left: 1px solid black;
+  padding: 0px 20px 20px 20px;
+  height: 100%;
+}
+
+.list-btn{
+  float: right;
+}
+
+.role-info{
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 30px;
+  background-color: #F1F1F1;
+}
+
+.emphasize{
+  font-weight: bold;
+}

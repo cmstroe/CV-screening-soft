@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>CV Grading</title>
+    <link rel="stylesheet" href="css/second.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> <!--jQuery-->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+  </head>
+  <body class="bg-third">
+
+    <!--navigation bar -->
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <button type="button" class="btn btn-default" aria-label="Left Align">
+        <a class="navbar-brand" href="#"></a>
+      </button>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="/cv-grading">CV Grading</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/applicant-questions">Applicant Questions</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/applicant-reports">Applicant Reports</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/recruiter-channel">Communication Channel</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/role-management">Role Management</a>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="nav-item">
+            <a class="nav-link" href="/recruiter-profile">Profile</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/login">Log Out</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container">
+      <h1>CV Grading</h1>
+      <div class="row">
+        <div class="col">
+          <div class="p-3 mb-2 bg-light text-dark">
+            <h3>Applicant's CV</h3>
+            <div class="col">
+                <div class="row">
+                  <div class="col-8 col-sm-6">
+                    <p class="font-weight-bold">Name</p>
+                  </div>
+                  <div class="col-4 col-sm-6">
+                    {{Applicant_Name}}
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-8 col-sm-6">
+                  <p class="font-weight-bold">University:
+                  </div>
+                  <div class="col-4 col-sm-6">
+                    {{Applicant_University}}
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-8 col-sm-6">
+                    <p class="font-weight-bold">Degree:
+                  </div>
+                  <div class="col-4 col-sm-6">
+                    {{Applicant_Degree}}
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-8 col-sm-6">
+                  <p class="font-weight-bold">  A Levels:
+                  </div>
+                  <div class="col-4 col-sm-6">
+                    {{Applicant_ALevels}}
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-8 col-sm-6">
+                  <p class="font-weight-bold">  Languages:
+                  </div>
+                  <div class="col-4 col-sm-6">
+                    {{Applicant_Languages}}
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-8 col-sm-6">
+                  <p class="font-weight-bold">  Other Skills:
+                  </div>
+                  <div class="col-4 col-sm-6">
+                    {{Applicant_Skills}}
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-8 col-sm-6">
+                  <p class="font-weight-bold">  Hobbies:
+                  </div>
+                  <div class="col-4 col-sm-6">
+                    {{Applicant_Hobbies}}
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-8 col-sm-6">
+                <p class="font-weight-bold">  Experience:
+                  </div>
+                  <div class="col-4 col-sm-6">
+                    {{Applicant_Experience}}
+                  </div>
+                </div>
+
+
+            </div>
+
+        </div>
+        </div>
+        <div class="col">
+          <div class="p-3 mb-2 bg-light text-dark">
+            <h3>How good is this CV?</h3>
+
+            <form class="left-align" id="ranking-form" action="#" method="post">
+              <label class="radio-inline"><input type="radio" name="q1-ranking" value="1" checked>1</label>
+              <label class="radio-inline"><input type="radio" name="q1-ranking" value="2">2</label>
+              <label class="radio-inline"><input type="radio" name="q1-ranking" value="3">3</label>
+              <label class="radio-inline"><input type="radio" name="q1-ranking" value="4">4</label>
+              <label class="radio-inline"><input type="radio" name="q1-ranking" value="5">5</label>
+              <label class="radio-inline"><input type="radio" name="q1-ranking" value="6">6</label>
+              <label class="radio-inline"><input type="radio" name="q1-ranking" value="7">7</label>
+              <label class="radio-inline"><input type="radio" name="q1-ranking" value="8">8</label>
+              <label class="radio-inline"><input type="radio" name="q1-ranking" value="9">9</label>
+              <br>
+              <input class="btn btn-outline-secondary" type="submit" name="" value="Submit">
+            </form>
+        </div>
+      </div>
+    </div>
+
+<!--
+    <div class="container">
+      <h1>CV Grading</h1>
+      <div class = "row">
+        <div class ="col">
+          <div class="cv-view">
+        <p><span class="emphasize">Name: </span>{{Applicant_Name}}</p><br>
+        <p><span class="emphasize">University: </span>{{Applicant_University}}</p><br>
+        <p><span class="emphasize">Degree: </span>{{Applicant_Degree}}</p><br>
+        <p><span class="emphasize">A Levels: </span>{{Applicant_ALevels}}</p><br>
+        <p><span class="emphasize">Languages: </span>{{Applicant_Languages}}</p><br>
+        <p><span class="emphasize">Other Skills: </span>{{Applicant_Skills}}</p><br>
+        <p><span class="emphasize">Hobbies: </span>{{Applicant_Hobbies}}</p><br>
+        <p><span class="emphasize">Experience: </span>{{Applicant_Experience}}</p><br>
+
+      </div>
+    </div>
+      <div class="col">
+        <div class="question-display">
+          <h2>CVs:</h2>
+          <ul class="list-group">
+            <li class="list-group-item">
+              <a class="btn btn-*">{{CV3}}</a>
+            </li>
+            <li class="list-group-item">
+              <a class="btn btn-*">{{CV3}}</a>
+            </li>
+            <li class="list-group-item">
+              <a class="btn btn-*">{{CV3}}</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <form class="left-align" id="ranking-form" action="#" method="post">
+
+          <h3>How good is this CV?</h3>
+          <label class="radio-inline"><input type="radio" name="q1-ranking" value="1">1</label>
+          <label class="radio-inline"><input type="radio" name="q1-ranking" value="2">2</label>
+          <label class="radio-inline"><input type="radio" name="q1-ranking" value="3" checked>3</label>
+          <label class="radio-inline"><input type="radio" name="q1-ranking" value="4">4</label>
+          <label class="radio-inline"><input type="radio" name="q1-ranking" value="5">5</label>
+          <label class="radio-inline"><input type="radio" name="q1-ranking" value="6">6</label>
+          <label class="radio-inline"><input type="radio" name="q1-ranking" value="7">7</label>
+          <label class="radio-inline"><input type="radio" name="q1-ranking" value="8">8</label>
+          <label class="radio-inline"><input type="radio" name="q1-ranking" value="9">9</label>
+          <br><br>
+
+          <input class="btn btn-primary btn-block" type="submit" name="" value="Submit">
+      </form>
+    </div>
+  </div>-->
+  </body>
+</html>

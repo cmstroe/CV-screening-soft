@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Profile</title>
+    <link rel="stylesheet" href="css/second.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> <!--jQuery-->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  </head>
+  <body class="bg-third">
+
+    <!--navigation bar -->
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <button type="button" class="btn btn-default" aria-label="Left Align">
+        <a class="navbar-brand" href="#"></a>
+      </button>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/cv-grading">CV Grading</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/applicant-questions">Applicant Questions</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/applicant-reports">Applicant Reports</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/recruiter-channel">Communication Channel</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/role-management">Role Management</a>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="nav-item active">
+            <a class="nav-link" href="/recruiter-profile">Profile</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/login">Log Out</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container">
+      <h1>{{Recruiter_First_Name}} {{Recruiter_Last_Name}}</h1>
+      <br>
+      <div class="row">
+        <div class="col">
+          <div class="p-3 mb-2 bg-light text-dark">
+            <div class="role-info">
+              <p><span class="emphasize">Email: </span> {{Recruiter_Email}}</p>
+              <br>
+              <p><span class="emphasize">Title: </span>{{Recruiter_Title}}</p>
+              <br>
+              <button data-toggle="modal" data-target="#edit-modal" type="button" class="btn btn-secondary btn-sm"><i class="fas fa-pencil-alt"></i>&#9;Edit</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="edit-modal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">Edit Profile</h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+              <form action="#" method="post">
+
+                <label for="first-name">First Name</label>
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                  <input type="text" class="form-control" name="first-name" value="{{Recruiter_First_Name}}">
+                </div>
+                <br>
+                <label for="last-name">Last Name</label>
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                  <input type="text" class="form-control" name="last-name" value="{{Recruiter_Last_Name}}">
+                </div>
+                <br>
+                <label for="recruiter-title">Title</label>
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                  <input type="text" class="form-control" name="recruiter-title" value="{{Recruiter_Title}}">
+                </div>
+                <br>
+                <label for="email">Email</label>
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                  <input type="email" class="form-control" name="email" value="{{Recruiter_Email}}">
+                </div>
+                <br>
+                <label for="password-old">Old Password</label>
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                  <input class="form-control" type="password" name="password-old">
+                </div>
+                <br>
+                <label for="password-new">New Password</label>
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                  <input class="form-control" type="password" name="password-new">
+                </div>
+                <br>
+
+                <input class="btn btn-primary btn-block" type="submit" name="" value="Save Changes">
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

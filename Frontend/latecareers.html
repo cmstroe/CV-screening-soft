@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Job Opportunities</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> <!--jQuery-->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+  </head>
+  <body>
+  <!--navigation bar -->
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <button type="button" class="btn btn-default" aria-label="Left Align">
+        <a class="navbar-brand" href="#"></a>
+      </button>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="/applicant-careers">Careers</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/applicant-channel">Communication Channel</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/jobapplication">Apply now</a>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="nav-item">
+            <a class="nav-link" href="/profile">Profile</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/login">Log Out</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container">
+      <br>
+      <h1>Graduate jobs</h1>
+      <span class= "float-right">
+      <a class="btn btn-outline-secondary" data-target="#" href="/jobapplication" role="button">Apply for a position</a>
+      </span>
+      <br>
+      <br>
+      <div class="row">
+      <div class="col">
+        <div class="p-3 mb-2 bg-light text-dark">
+        <h2>Technology Division</h2>
+        <p>Our Technology teams are providing technology platforms
+        for customers and colleagues which are responsive, simple to use, and well controlled. </p>
+        <p>
+        <a class="btn btn-primary" data-toggle="collapse" href="#collapse1" role="button" aria-expanded="false" aria-controls="collapse1">
+          Find out more
+        </a>
+      </p>
+      <div class="collapse" id="collapse1">
+      <div class="card card-body">
+        Our requirements are:
+        {{LateCareersTechReq}}
+      </div>
+      </div>
+      </div></div>
+      <div class="col">
+        <div class="p-3 mb-2 bg-light text-dark">
+        <h2>Banking</h2>
+          <br>
+          <p>Our Commercial & Private Banking franchise brings together UK market leading
+             businesses and brands serving commercial enterprises.</p>
+          <p>
+          <a class="btn btn-primary" data-toggle="collapse" href="#collapse2" role="button" aria-expanded="false" aria-controls="collapse2">
+            Find out more
+          </a>
+        </p>
+        <div class="collapse" id="collapse2">
+        <div class="card card-body">
+          Our requirements are:
+          {{LateCareersBankingReq}}
+        </div>
+        </div>
+        </div>
+      </div>
+      </div>
+      <div class="row"></div>
+      <div class="row">
+      <div class="col">
+        <div class="p-3 mb-2 bg-light text-dark">
+        <h2>Audit</h2>
+        <p>Internal Audit provides assurance that we understand our risks and are controlling them effectively. </p>
+        <p>
+        <a class="btn btn-primary" data-toggle="collapse" href="#collapse3" role="button" aria-expanded="false" aria-controls="collapse3">
+          Find out more
+        </a>
+      </p>
+      <div class="collapse" id="collapse3">
+      <div class="card card-body">
+        Our requirements are:
+        {{LateCareersAuditReq}}
+      </div>
+      </div>
+      </div></div>
+      <div class="col">
+        <div class="p-3 mb-2 bg-light text-dark">
+        <h2>Data and Analytics</h2>
+          <br>
+          <p>Analytics teams are unlocking its potential and using it to help us really understand our customers,
+            to serve them better, and to drive our business.</p>
+            <p>
+            <a class="btn btn-primary" data-toggle="collapse" href="#collapse4" role="button" aria-expanded="false" aria-controls="collapse4">
+              Find out more
+            </a>
+          </p>
+          <div class="collapse" id="collapse4">
+          <div class="card card-body">
+            Our requirements are:
+            {{LateCareersAnalyticsReq}}
+          </div>
+          </div>
+        </div>
+      </div>
+      </div>
+
+  </div>
+  </body>
+</html>

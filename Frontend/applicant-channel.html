@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Communication Channel</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <script src="js/applicant_channel.js"></script>
+  </head>
+  <body>
+
+    <!--navigation bar -->
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <button type="button" class="btn btn-default" aria-label="Left Align">
+        <a class="navbar-brand" href="#"></a>
+      </button>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/applicant-careers">Careers</a>
+          </li>
+          <li class="nav-item  active">
+            <a class="nav-link" href="/applicant-channel">Communication Channel</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/jobapplication">Apply now</a>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="nav-item">
+            <a class="nav-link" href="/profile">Profile</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/login">Log Out</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container">
+      <br>
+      <h1>Communication Channel</h1>
+      <h3><a href="faq.html" class="text-info">Frequent Asked Questions</a>
+        <span class= "float-right"> <a class="btn btn-outline-secondary" data-toggle="collapse" data-target="#collapseQuestion" aria-expanded="false" aria-controls="collapseQuestion" role="button">Ask A Question</a> </span></h3>
+
+        <div class="collapse" id="collapseQuestion">
+          <div class="card card-body">
+              <form id="applicant-side-channel-form" action="/applicant-channel-question" method="post">
+              <div class="form-group">
+                <label for="form-question-textarea">Please type and write down what you want to ask. Our recruiter will answer it as soon as possible.</label>
+                <textarea class="form-control" id="form-question" maxlength="150" placeholder="Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident." rows="3"></textarea>
+              </div>
+              <span class= "float-right"> <button type="submit" class="btn btn-primary" id="submit_question" >Submit</button> </span>
+            </form>
+          </div>
+        </div>
+      <br>
+      <div class="role-info">
+        <div class="list-group">
+          <a href="#"  data-toggle="modal" data-target="#question-modal" class="list-group-item list-group-item-info">Feedback from Question {{Question_ID}}</a>
+          <a href="#"  data-toggle="modal" data-target="#question-modal" class="list-group-item list-group-item-info">Feedback from Question {{Question_ID}}</a>
+          <a href="#"  data-toggle="modal" data-target="#question-modal" class="list-group-item list-group-item-info">Feedback from Question {{Question_ID}}</a>
+        </div>
+      </div>
+      <div class="modal fade" id="question-modal" tabindex="-1" role="dialog" aria-labelledby="questionModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="questionModalLabel">Question {{Question_ID}}</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p>{{question_answer}}</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

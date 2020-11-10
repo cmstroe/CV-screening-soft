@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Role Management</title>
+    <link rel="stylesheet" href="css/second.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> <!--jQuery-->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  </head>
+  <body class="bg-third">
+
+    <!--navigation bar -->
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <button type="button" class="btn btn-default" aria-label="Left Align">
+        <a class="navbar-brand" href="#"></a>
+      </button>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/cv-grading">CV Grading</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/applicant-questions">Applicant Questions</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/applicant-reports">Applicant Reports</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/recruiter-channel">Communication Channel</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="/role-management">Role Management</a>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="nav-item">
+            <a class="nav-link" href="/recruiter-profile">Profile</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/login">Log Out</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container">
+      <h1>Role Management</h1>
+
+      <div class="row">
+        <div class="col">
+          <div class="p-3 mb-2 bg-light text-dark">
+            <h3>Current Roles</h3>
+            <div class="role-info">
+              <div class="list-group">
+                <a href="#" data-toggle="modal" data-target="#role-modal" class="list-group-item list-group-item-info">Software Developer <span class="badge badge-pill badge-primary" style="float: right">Currently accepting applicants</span></a>
+                <a href="#" data-toggle="modal" data-target="#role-modal" class="list-group-item list-group-item-danger">Project Manager <span class="badge badge-pill badge-primary" style="float: right">Currently accepting applicants</span></a>
+                <a href="#" data-toggle="modal" data-target="#role-modal" class="list-group-item list-group-item-info">Investment Banker <span class="badge badge-pill badge-primary" style="float: right">Currently accepting applicants</span></a>
+              </div>
+              <br>
+              <button data-toggle="modal" data-target="#role-modal" class="btn btn-primary btn-block" type="button" name="add-role">Add Role</button>
+            </div>
+
+            <!-- the information displayed here should depend on the role selected-->
+            <div id="role-modal" class="modal fade" role="dialog">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h4 class="modal-title">Role Information</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  </div>
+                  <div class="modal-body">
+                    <form action="#" method="post">
+
+                      <label for="role-name">Name</label>
+                      <div class="input-group">
+                        <span class="input-group-prepend"><i class="fas fa-bookmark input-group-text" style="padding-top: 10px;"></i></span>
+                        <input type="text" class="form-control" name="role-name" value="Software Developer">
+                      </div>
+                      <br>
+                      <div class="input-group">
+                        <span class="input-group-prepend"><i class="fas fa-envelope input-group-text" style="padding-top: 10px;"></i></span>
+                        <input type="email" class="form-control" name="email" value="bill@example.com">
+                      </div>
+                      <br>
+                      <div class="form-group">
+                        <label for="skills">Required Skills</label>
+                        <textarea class="form-control" name="skills" rows="8">Experience in a modern programming language &#10;{{Skill}} &#10;{{Skill}}</textarea>
+                      </div>
+                      <div class="checkbox">
+                        <label><input type="checkbox" name="active" checked>Currently accepting applications?</label>
+                      </div>
+
+                      <!-- this button should read 'add new role' if the add-role button was selected above -->
+                      <input class="btn btn-primary btn-block" type="submit" name="" value="Save Changes">
+                    </form>
+                    <br>
+                    <button class="btn btn-danger btn-block">Delete Role</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
